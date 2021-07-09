@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <div>
+    <div id="navigation">
       <router-link to="/">All Images</router-link>&nbsp;&nbsp;&nbsp;
       <router-link to="/my-favourite">My Favourite Image</router-link>
     </div>
@@ -32,5 +32,16 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#navigation{
+  margin-right: 20px ;
+  text-align: right;
+}
+#navigation a{
+  text-decoration: none;
+  color: black;
+}
+#navigation a:hover{
+  font-weight: bold;
 }
 </style>

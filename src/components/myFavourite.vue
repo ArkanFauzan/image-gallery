@@ -1,7 +1,7 @@
 <template>
   <div>
       <h1>My Favourite Image</h1>
-      <img style="padding:0px; margin:5px" v-for="image in myFavourite" :key="image.id" @click="showImage(image)" :src="image.thumbnailUrl" :alt="image.title" :title="image.title" />
+      <img style="padding:0px; margin:5px" class="list-image" v-for="image in myFavourite" :key="image.id" @click="showImage(image)" :src="image.thumbnailUrl" :alt="image.title" :title="image.title" />
       <div id="container-popup">
           <img id="image-popup" src="" alt="">
           <div id="detail-popup">
@@ -69,6 +69,9 @@ export default {
 </script>
 
 <style>
+    .list-image:hover{
+        cursor: pointer;
+    }
     #container-popup{
         width: 900px;
         height: 500px;

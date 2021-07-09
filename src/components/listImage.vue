@@ -1,7 +1,7 @@
 <template>
   <div>
       <h1>Image Gallery</h1>
-      <img style="padding:0px; margin:5px" v-for="image in images" :key="image.id" @click="showImage(image)" :src="image.thumbnailUrl" :alt="image.title" :title="image.title" />
+      <img style="padding:0px; margin:5px" class="list-image" v-for="image in images" :key="image.id" @click="showImage(image)" :src="image.thumbnailUrl" :alt="image.title" :title="image.title" />
       <div id="container-popup">
           <img id="image-popup" src="" alt="">
           <div id="detail-popup">
@@ -71,7 +71,7 @@ export default {
                 this.myFavourite.push(JSON.parse(image));
                 localStorage.setItem('myFavourite', JSON.stringify(this.myFavourite));
             }
-            
+
             document.getElementById("container-popup").style.display= "none";
         },
         closeImage(){
@@ -82,6 +82,9 @@ export default {
 </script>
 
 <style>
+    .list-image:hover{
+        cursor: pointer;
+    }
     #container-popup{
         width: 900px;
         height: 500px;
