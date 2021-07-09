@@ -35,7 +35,7 @@ export default {
     },
     data(){
         return{
-            myFavourite : "",
+            myFavourite : ""
         }
     },
     methods:{

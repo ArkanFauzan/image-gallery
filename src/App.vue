@@ -3,8 +3,8 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <div id="navigation">
-      <router-link to="/">All Images</router-link>&nbsp;&nbsp;&nbsp;
-      <router-link to="/my-favourite">My Favourite Image</router-link>
+      <router-link :to="{ name: 'List', params: { search } }">All Images</router-link>&nbsp;&nbsp;&nbsp;
+      <router-link :to="{ name: 'My Favourite', params: { search } }">My Favourite Image</router-link>
     </div>
     <router-view></router-view>
   </div>
@@ -16,6 +16,11 @@ export default {
   name: 'App',
   mounted(){
 
+  },
+  data(){
+    return{
+      search : ""
+    }
   },
   components: {
     // HelloWorld,
